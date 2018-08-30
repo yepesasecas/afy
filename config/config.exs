@@ -22,6 +22,12 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:user_id]
 
+  # Configures Guardian
+  config :afy, Afy.Guardian,
+     issuer: "afy",
+     secret_key: "FMj6DFVHYLK39Me1EGC32YPpt3b8inLcCNU0hQ4vF5TDStlodbcsqxdL8k+12bvN"
+
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
