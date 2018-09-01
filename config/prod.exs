@@ -17,8 +17,8 @@ config :afy, AfyWeb.Endpoint,
   load_from_system_env: true,
   server: true,
   secret_key_base: "${SECRET_KEY_BASE}",
-  url: [host: "afy.gigalixirapp.com"],
-  force_ssl: [hsts: true]
+  url: [host: "afy.gigalixirapp.com", port: 443],
+  force_ssl: [hsts: true, host: nil]
 
 config :afy, Afy.Repo,
   adapter: Ecto.Adapters.Postgres,
