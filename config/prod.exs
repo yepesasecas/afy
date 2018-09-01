@@ -17,7 +17,7 @@ config :afy, AfyWeb.Endpoint,
   load_from_system_env: true,
   server: true,
   secret_key_base: "${SECRET_KEY_BASE}",
-  url: [host: "afy.gigalixirapp.com", port: 443],
+  url: [host: "afy.gigalixirapp.com"],
   force_ssl: [hsts: true]
 
 config :afy, Afy.Repo,
