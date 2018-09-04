@@ -45,6 +45,6 @@ defmodule Afy.GoogleCloud.Vision do
 
   defp set_api_key(url) do
     url
-    |> Map.put(:query, "key=#{Application.get_env(:afy, :google_cloud_vision_api)}")
+    |> Map.put(:query, "key=#{Application.get_env(:afy, :google_cloud_vision_api_key)}")
   end
 end

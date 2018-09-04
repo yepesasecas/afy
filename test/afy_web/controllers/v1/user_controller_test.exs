@@ -1,4 +1,4 @@
-defmodule AfyWeb.UserControllerTest do
+defmodule AfyWeb.V1.UserControllerTest do
   use AfyWeb.ConnCase
 
   alias Afy.Accounts

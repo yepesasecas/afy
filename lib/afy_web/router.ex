@@ -14,6 +14,7 @@ defmodule AfyWeb.Router do
 
     post "/sign_up", V1.UserController, :create
     post "/sign_in", V1.UserController, :sign_in
+    post "/google_cloud/vision", V1.GoogleCloudController, :vision
   end
 
   scope "/api/v1", AfyWeb do
