@@ -1,9 +1,9 @@
-defmodule AfyWeb.UserController do
+defmodule AfyWeb.V1.UserController do
   use AfyWeb, :controller
 
   alias Afy.Accounts
   alias Afy.Accounts.User
-  alias Afy.Guardian
+  alias Afy.Accounts.Guardian
 
   action_fallback AfyWeb.FallbackController
 

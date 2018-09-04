@@ -1,4 +1,4 @@
-defmodule AfyWeb.UserView do
+defmodule AfyWeb.V1.UserView do
   use AfyWeb, :view
   alias AfyWeb.UserView
 

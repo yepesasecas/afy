@@ -76,7 +76,7 @@ defmodule AfyWeb.UserControllerTest do
   describe "show user" do
     test "with valid jwt token", %{conn: conn} do
       user = create_user(%{email: "test@afy.com", password: "password", password_confirmation: "password"})
-      {:ok, token, _claims} = Afy.Guardian.encode_and_sign(user)
+      {:ok, token, _claims} = Afy.Accounts.Guardian.encode_and_sign(user)
 
       body = conn
         |> put_req_header("authorization", "Bearer #{token}")
@@ -87,7 +87,7 @@ defmodule AfyWeb.UserControllerTest do
 
     test "with invalid jwt token", %{conn: conn} do
       user = create_user(%{email: "test@afy.com", password: "password", password_confirmation: "password"})
-      {:ok, token, _claims} = Afy.Guardian.encode_and_sign(user)
+      {:ok, token, _claims} = Afy.Accounts.Guardian.encode_and_sign(user)
       conn
       |> put_req_header("authorization", "Bearer #{token}invalid")
       |> get(user_path(conn, :show), user: %{email: user.email, password: user.password})

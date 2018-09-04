@@ -22,10 +22,10 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:user_id]
 
-  # Configures Guardian
-  config :afy, Afy.Guardian,
-     issuer: "afy",
-     secret_key: "FMj6DFVHYLK39Me1EGC32YPpt3b8inLcCNU0hQ4vF5TDStlodbcsqxdL8k+12bvN"
+# Configures Guardian
+config :afy, Afy.Accounts.Guardian,
+  issuer: "afy",
+  secret_key: "FMj6DFVHYLK39Me1EGC32YPpt3b8inLcCNU0hQ4vF5TDStlodbcsqxdL8k+12bvN"
 
 
 # Import environment specific config. This must remain at the bottom
