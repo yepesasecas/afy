@@ -42,7 +42,8 @@ defmodule Afy.Mixfile do
       {:guardian, "~> 1.0"}, # Elixir Authentication
       {:comeonin, "~> 4.0"}, # password encryption
       {:bcrypt_elixir, "~> 1.0"}, # password encryption
-      {:distillery, "~> 1.0.0"}
+      {:distillery, "~> 1.0.0"},
+      {:httpoison, "~> 1.3"}
     ]
   end
 

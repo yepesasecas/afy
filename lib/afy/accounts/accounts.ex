@@ -6,7 +6,7 @@ defmodule Afy.Accounts do
   import Ecto.Query, warn: false
   alias Afy.Repo
   alias Afy.Accounts.User
-  alias Afy.Guardian
+  alias Afy.Accounts.Guardian
 
 
   def get_user!(id), do: Repo.get!(User, id)

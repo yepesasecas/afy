@@ -1,4 +1,32 @@
 # Afy
+My own API or AFY.
+Any API Web Service that I want to play with will be included.
+
+## Documentation
+- [postman](https://documenter.getpostman.com/view/2204425/RWaDXX8M)
+
+## Logs
+I'm using [papertrail](https://papertrailapp.com) to keep production logs and search.
+
+## Host
+I'm hosting AFY in [Gigalixir](https://gigalixir.com)
+
+## Authentication
+I'm using [Guardian](https://hex.pm/packages/guardian) for JWT.
+[comeonin](https://hex.pm/packages/comeonin) and [bcrypt_elixir](https://hex.pm/packages/bcrypt_elixir) for Password hashing.
+
+## Releases
+I'm using [Distillery](https://hex.pm/packages/distillery).
+
+# TODO
+- Twilio
+- Google Vision
+- Hue
+- Watson
+- 3CE
+- CI/CD
+
+# Intall
 
 To start your Phoenix server:
 
@@ -9,11 +37,3 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix

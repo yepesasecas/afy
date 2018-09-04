@@ -12,13 +12,14 @@ defmodule AfyWeb.Router do
   scope "/api/v1", AfyWeb do
     pipe_through :api
 
-    post "/sign_up", UserController, :create
-    post "/sign_in", UserController, :sign_in
+    post "/sign_up", V1.UserController, :create
+    post "/sign_in", V1.UserController, :sign_in
   end
 
   scope "/api/v1", AfyWeb do
     pipe_through [:api, :jwt_authenticated]
 
-    get "/me", UserController, :show
+    get "/me", V1.UserController, :show
+    post "/google_cloud/vision", V1.GoogleCloudController, :vision
   end
 end

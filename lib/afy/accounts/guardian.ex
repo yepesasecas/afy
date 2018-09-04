@@ -1,4 +1,4 @@
-defmodule Afy.Guardian do
+defmodule Afy.Accounts.Guardian do
   use Guardian, otp_app: :afy
 
   def subject_for_token(resource, _claims) do
