@@ -19,5 +19,11 @@ defmodule AfyWeb.V1.GoogleCloudControllerTest do
       body = json_response(conn, 200)
       assert %{"responses" => [%{"labelAnnotations" => _labels}]} = body
     end
+
+    # test "with missing or misspelled params" do
+    #   valid_params = %{misspelled_url: "http://www.artyfactory.com/art_appreciation/animals_in_art/pablo_picasso/picasso_bulls.jpg"}
+    #   conn = post(conn, google_cloud_path(conn, :vision), image: valid_params)
+    #   body = json_response(conn, 400)
+    # end
   end
 end

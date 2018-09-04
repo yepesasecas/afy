@@ -1,9 +1,20 @@
 defmodule Afy.GoogleCloud.Vision do
   require Logger
+  alias Afy.GoogleCloud.Vision.Image
+  alias Ecto.Changeset
 
-  def object_in_image(img), do: object_in_image_do(%{content: img})
+  def create_image(attrs \\ %{}) do
+    %Image{}
+    |> Image.changeset(attrs)
+    |> Changeset.apply_action(:update)
+  end
 
-  def object_in_image_url(img), do: object_in_image_do(%{source: %{imageUri: img}})
+  def object_in_image(img) do
+    img
+    |> Image.image_section()
+    |> body_request()
+    |> http_request()
+  end
 
   def local_image_base_64(path) do
     path
@@ -12,12 +23,6 @@ defmodule Afy.GoogleCloud.Vision do
   end
 
   # private
-
-  defp object_in_image_do(image_section) do
-    image_section
-    |> body_request()
-    |> http_request()
-  end
 
   defp body_request(image_section) do
     Poison.encode!(%{
