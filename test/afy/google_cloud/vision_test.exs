@@ -1,5 +1,6 @@
 defmodule Afy.GoogleCloud.VisionTest do
-  use Afy.DataCase
+  use Afy.DataCase, async: true
+
   alias Afy.GoogleCloud.Vision.Image
   alias Afy.GoogleCloud.Vision
 

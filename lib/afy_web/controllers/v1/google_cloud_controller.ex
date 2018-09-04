@@ -2,7 +2,6 @@ defmodule AfyWeb.V1.GoogleCloudController do
   use AfyWeb, :controller
   alias Afy.GoogleCloud.Vision
 
-
   action_fallback AfyWeb.FallbackController
 
   def vision(conn, %{"image" => image}) do
