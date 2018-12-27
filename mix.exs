@@ -43,7 +43,8 @@ defmodule Afy.Mixfile do
       {:comeonin, "~> 4.0"}, # password encryption
       {:bcrypt_elixir, "~> 1.0"}, # password encryption
       {:distillery, "~> 1.0.0"},
-      {:httpoison, "~> 1.3"}
+      {:httpoison, "~> 1.3"},
+      {:hs, github: "yepesasecas/hs"}
     ]
   end
 
@@ -57,7 +58,7 @@ defmodule Afy.Mixfile do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      "test": ["ecto.create --quiet", "ecto.migrate", "test"]
+      test: ["ecto.create --quiet", "ecto.migrate", "test"]
     ]
   end
 end

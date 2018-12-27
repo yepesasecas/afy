@@ -21,5 +21,6 @@ defmodule AfyWeb.Router do
 
     get "/me", V1.UserController, :show
     post "/google_cloud/vision", V1.GoogleCloudController, :vision
+    post "/classify", V1.ClassifyController, :classify
   end
 end
