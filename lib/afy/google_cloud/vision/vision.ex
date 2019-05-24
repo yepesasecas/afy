@@ -29,6 +29,9 @@ defmodule Afy.GoogleCloud.Vision do
       requests: [%{
         features: [%{
           type: "LABEL_DETECTION"
+        },
+        %{
+          type: "DOCUMENT_TEXT_DETECTION"
         }],
         image: image_section
       }]
