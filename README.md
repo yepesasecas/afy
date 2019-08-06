@@ -1,4 +1,4 @@
-# Afy
+# AFY
 My own API or AFY.
 Any API Web Service that I want to play with will be included.
 
