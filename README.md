@@ -16,7 +16,8 @@ I'm using [Guardian](https://hex.pm/packages/guardian) for JWT.
 [comeonin](https://hex.pm/packages/comeonin) and [bcrypt_elixir](https://hex.pm/packages/bcrypt_elixir) for Password hashing.
 
 ## Basic Google Vision
-Upload Photo and obtain label and text in image.
+1. Upload image and obtain object names in image.
+2. Upload image and obtain text in image.
 
 ## Releases
 I'm using [Distillery](https://hex.pm/packages/distillery).
@@ -27,6 +28,7 @@ I'm using [Distillery](https://hex.pm/packages/distillery).
 - Watson
 - 3CE
 - CI/CD
+- Uber
 
 # Intall
 
