@@ -12,7 +12,7 @@ config :logger, level: :warn
 # Configure your database
 config :afy, Afy.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "andresyepes",
+  username: "postgres",
   password: "",
   database: "afy_test",
   hostname: "localhost",
