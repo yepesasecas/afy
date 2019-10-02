@@ -3,7 +3,7 @@ My own API or AFY.
 Any API Web Service that I want to play with will be included.
 
 ## Documentation
-- [postman](https://documenter.getpostman.com/view/2204425/RWaDXX8M)
+I'm using [postman](https://documenter.getpostman.com/view/2204425/RWaDXX8M)
 
 ## Logs
 I'm using [papertrail](https://papertrailapp.com) to keep production logs and search.
@@ -19,6 +19,9 @@ I'm using [Guardian](https://hex.pm/packages/guardian) for JWT.
 1. Upload image and obtain object names in image.
 2. Upload image and obtain text in image.
 
+## 3CE
+i'm using my own HS library to consume 3CE API. 
+
 ## Releases
 I'm using [Distillery](https://hex.pm/packages/distillery).
 
@@ -26,9 +29,8 @@ I'm using [Distillery](https://hex.pm/packages/distillery).
 - Twilio
 - Hue
 - Watson
-- 3CE
-- CI/CD
 - Uber
+- Apple Notifications (Pushex?)
 
 # Intall
 
