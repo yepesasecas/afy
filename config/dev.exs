@@ -44,6 +44,3 @@ config :afy, Afy.Repo,
   database: "afy_dev",
   hostname: "localhost",
   pool_size: 10
-
-
-import_config "#{Mix.env}.secret.exs"
