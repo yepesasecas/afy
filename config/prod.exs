@@ -29,5 +29,3 @@ config :afy, Afy.Repo,
 
 # Do not print debug messages in production
 config :logger, level: :info
-
-config :afy, google_cloud_vision_api_key: System.get_env("GOOGLE_CLOUD_VISION_API_KEY")

@@ -27,6 +27,8 @@ config :afy, Afy.Accounts.Guardian,
   issuer: "afy",
   secret_key: "FMj6DFVHYLK39Me1EGC32YPpt3b8inLcCNU0hQ4vF5TDStlodbcsqxdL8k+12bvN"
 
+# Google Vision API Key
+config :afy, google_cloud_vision_api_key: System.get_env("GOOGLE_CLOUD_VISION_API_KEY")
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
