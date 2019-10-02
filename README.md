@@ -1,5 +1,5 @@
-https://travis-ci.com/yepesasecas/afy.svg?branch=master
 
+![travisCI](https://travis-ci.com/yepesasecas/afy.svg?branch=master)
 # AFY
 My own API or AFY.
 Any API Web Service that I want to play with will be included.
