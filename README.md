@@ -1,9 +1,11 @@
+
+![travisCI](https://travis-ci.com/yepesasecas/afy.svg?branch=master)
 # AFY
 My own API or AFY.
 Any API Web Service that I want to play with will be included.
 
 ## Documentation
-- [postman](https://documenter.getpostman.com/view/2204425/RWaDXX8M)
+I'm using [postman](https://documenter.getpostman.com/view/2204425/RWaDXX8M)
 
 ## Logs
 I'm using [papertrail](https://papertrailapp.com) to keep production logs and search.
@@ -24,6 +26,9 @@ also, TravisCI is well documented.
 1. Upload image and obtain object names in image.
 2. Upload image and obtain text in image.
 
+## 3CE
+i'm using my own HS library to consume 3CE API.
+
 ## Releases
 I'm using [Distillery](https://hex.pm/packages/distillery).
 
@@ -31,8 +36,8 @@ I'm using [Distillery](https://hex.pm/packages/distillery).
 - Twilio
 - Hue
 - Watson
-- 3CE
 - Uber
+- Apple Notifications (Pushex?)
 
 # Intall
 
