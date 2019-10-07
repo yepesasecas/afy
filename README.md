@@ -15,6 +15,11 @@ I'm hosting AFY in [Gigalixir](https://gigalixir.com)
 I'm using [Guardian](https://hex.pm/packages/guardian) for JWT.
 [comeonin](https://hex.pm/packages/comeonin) and [bcrypt_elixir](https://hex.pm/packages/bcrypt_elixir) for Password hashing.
 
+## CI/CD
+I'm using TravisCI.
+Gigalixir has a simple travis.yml file. https://gigalixir.readthedocs.io/en/latest/main.html#how-to-set-up-continuous-integration-ci-cd
+also, TravisCI is well documented.
+
 ## Basic Google Vision
 1. Upload image and obtain object names in image.
 2. Upload image and obtain text in image.
@@ -27,7 +32,6 @@ I'm using [Distillery](https://hex.pm/packages/distillery).
 - Hue
 - Watson
 - 3CE
-- CI/CD
 - Uber
 
 # Intall

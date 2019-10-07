@@ -30,6 +30,9 @@ config :afy, Afy.Accounts.Guardian,
 # Google Vision API Key
 config :afy, google_cloud_vision_api_key: System.get_env("GOOGLE_CLOUD_VISION_API_KEY")
 
+# Use Jason for JSON parsing in Phoenix
+config :afy, :json_library, Jason
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

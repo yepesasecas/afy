@@ -1,7 +1,9 @@
 defmodule AfyWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :afy
 
-  socket "/socket", AfyWeb.UserSocket
+  socket "/socket", AfyWeb.UserSocket,
+    websocket: true
+    # longpoll: [check_origin: ...]
 
   # Serve at "/" the static files from "priv/static" directory.
   #
