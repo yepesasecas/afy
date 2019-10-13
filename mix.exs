@@ -38,13 +38,16 @@ defmodule Afy.Mixfile do
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"},
+      # {:cowboy, "~> 1.0"},
+      {:plug_cowboy, "~> 1.0"},
       {:guardian, "~> 1.0"}, # Elixir Authentication
       {:comeonin, "~> 4.0"}, # password encryption
       {:bcrypt_elixir, "~> 1.0"}, # password encryption
       {:distillery, "~> 1.0.0"},
-      {:httpoison, "~> 1.3"},
-      {:hs, github: "yepesasecas/hs"}
+      {:httpoison, "~> 1.0"},
+      {:hs, github: "yepesasecas/hs"},
+      {:pigeon, "~> 1.3.2"}, # push notifications iOS & Android
+      {:kadabra, "~> 0.4.4"} #push notifications iOS & Android
     ]
   end
 

@@ -30,6 +30,17 @@ config :afy, Afy.Accounts.Guardian,
 # Google Vision API Key
 config :afy, google_cloud_vision_api_key: System.get_env("GOOGLE_CLOUD_VISION_API_KEY")
 
+# Pigeon https://github.com/codedge-llc/pigeon
+#> n = Pigeon.APNS.Notification.new("hello!", "fe0e27c247bb1d5b2bc964617336d7c345e224a440d997eef4032680283eec0f", "topic optional")
+#> Pigeon.APNS.push(n)
+config :pigeon, :apns,
+  apns_default: %{
+    key: "./certs/ios/AuthKey_VT63UC8JQ8.p8",
+    key_identifier: "VT63UC8JQ8",
+    team_id: "9BZ568JFC6",
+    mode: :dev
+  }
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
