@@ -31,7 +31,7 @@ config :afy, Afy.Accounts.Guardian,
 config :afy, google_cloud_vision_api_key: System.get_env("GOOGLE_CLOUD_VISION_API_KEY")
 
 # Pigeon https://github.com/codedge-llc/pigeon
-#> n = Pigeon.APNS.Notification.new("hello!", "fe0e27c247bb1d5b2bc964617336d7c345e224a440d997eef4032680283eec0f", "topic optional")
+#> n = Pigeon.APNS.Notification.new("hello!", "fe0e27c247bb1d5b2bc964617336d7c345e224a440d997eef4032680283eec0f", "com.limonadademango.jay")
 #> Pigeon.APNS.push(n)
 config :pigeon, :apns,
   apns_default: %{
