@@ -8,3 +8,5 @@ services:
   - postgresql
 before_script:
   - PGPASSWORD=postgres psql -c 'create database afy_test;' -U postgres
+  - PGPASSWORD=postgres psql -c 'CREATE USER andresyepes WITH ENCRYPTED PASSWORD 'password';' -U postgres
+  - PGPASSWORD=postgres psql -c 'GRANT ALL PRIVILEGES ON DATABASE afy_test TO andresyepes;' -U postgres
