@@ -43,7 +43,7 @@ defmodule Afy.Mixfile do
       {:guardian, "~> 1.0"}, # Elixir Authentication
       {:comeonin, "~> 4.0"}, # password encryption
       {:bcrypt_elixir, "~> 1.0"}, # password encryption
-      {:distillery, "~> 1.0.0"},
+      {:distillery, "~> 2.1"},
       {:httpoison, "~> 1.0"},
       {:hs, github: "yepesasecas/hs"},
       {:pigeon, "~> 1.3.2"}, # push notifications iOS & Android

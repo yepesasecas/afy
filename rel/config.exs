@@ -1,11 +1,20 @@
-use Mix.Releases.Config,
-    # This sets the default release built by `mix release`
+# Import all plugins from `rel/plugins`
+# They can then be used by adding `plugin MyPlugin` to
+# either an environment, or release definition, where
+# `MyPlugin` is the name of the plugin module.
+~w(rel plugins *.exs)
+|> Path.join()
+|> Path.wildcard()
+|> Enum.map(&Code.eval_file(&1))
+
+use Distillery.Releases.Config,
+    # This sets the default release built by `mix distillery.release`
     default_release: :default,
-    # This sets the default environment used by `mix release`
-    default_environment: :dev
+    # This sets the default environment used by `mix distillery.release`
+    default_environment: Mix.env()
 
 # For a full list of config options for both releases
-# and environments, visit https://hexdocs.pm/distillery/configuration.html
+# and environments, visit https://hexdocs.pm/distillery/config/distillery.html
 
 
 # You may define one or more environments in this file,
@@ -14,23 +23,33 @@ use Mix.Releases.Config,
 # and environment configuration is called a profile
 
 environment :dev do
+  # If you are running Phoenix, you should make sure that
+  # server: true is set and the code reloader is disabled,
+  # even in dev mode.
+  # It is recommended that you build with MIX_ENV=prod and pass
+  # the --env flag to Distillery explicitly if you want to use
+  # dev mode.
   set dev_mode: true
   set include_erts: false
-  set cookie: :"K@3&M5LgAB,%r[_Q)2Jt)U^0)1oNiT6Ot>0rzslDgngvYyfWEbg8[PvH@>iFI=Pr"
+  set cookie: :"LZM${:w!9=!f`IM`UKK2c]Al>(ccjdp@4)(K8F390_&EeibWt2.>oyNVgz_Zg%(T"
 end
 
 environment :prod do
   set include_erts: true
   set include_src: false
-  set cookie: :">)<<m7_5szn;w:(N$^9jQ*&{<&e_BWSTntBF%hlL[j>ya(kO%a%ER0xukJb>Amt!"
+  set cookie: :"t8ocWLAaAYqMdD9!k>?.F{iHCkE|a1[D.WzZ.@U??VNvTI}gTKh~Uvlg*u;6e?M1"
+  set vm_args: "rel/vm.args"
 end
 
 # You may define one or more releases in this file.
 # If you have not set a default release, or selected one
-# when running `mix release`, the first release in the file
+# when running `mix distillery.release`, the first release in the file
 # will be used by default
 
 release :afy do
   set version: current_version(:afy)
+  set applications: [
+    :runtime_tools
+  ]
 end
 
