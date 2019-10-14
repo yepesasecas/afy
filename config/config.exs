@@ -35,7 +35,7 @@ config :afy, google_cloud_vision_api_key: System.get_env("GOOGLE_CLOUD_VISION_AP
 #> Pigeon.APNS.push(n)
 config :pigeon, :apns,
   apns_default: %{
-    key: "./certs/ios/AuthKey_VT63UC8JQ8.p8",
+    key: "priv/certs/ios/AuthKey_VT63UC8JQ8.p8",
     key_identifier: "VT63UC8JQ8",
     team_id: "9BZ568JFC6",
     mode: :dev
