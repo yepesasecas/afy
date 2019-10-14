@@ -8,3 +8,5 @@ services:
   - postgresql
 before_script:
   - PGPASSWORD=postgres psql -c 'create database afy_test;' -U postgres
+after_script:
+  - mix ecto.migrate
